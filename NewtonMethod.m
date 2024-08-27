@@ -1,4 +1,4 @@
-function [p, i] = findZero(f, p_0, TOL)
+function [p, i] = NewtonMethod(f, p_0, TOL)
     
     syms x
     f_prime = diff(f, x);
