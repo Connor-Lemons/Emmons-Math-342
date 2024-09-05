@@ -4,13 +4,12 @@ function [zero_val, iter] = bisectionMethod(f, a, b, TOL)
     
     iter = 1;
 
+    fprintf("%-15s%-15s%-15s%-15s%-15s\n", "n", "a", "b", "p", "f(p)")
     for i=1:n
-        disp("---------------")
-        iter
-        a
-        b
-        p = (a+b)/2
-        vpa(f(p), 4)
+        p = (a+b)/2;
+        vpa(f(p), 4);
+        fprintf("%-15.5g%-15.5g%-15.5g%-15.5g%-15.5g\n",...
+            iter, a, b, p, f(p))
         iter = iter + 1;
         if abs(f(p)) < TOL
             break
