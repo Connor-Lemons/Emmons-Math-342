@@ -43,4 +43,6 @@ function [a, b, c, d] = naturalSpline(f_vec, x_vec)
     a = f_vec(1:end-1);
     c = c(1:end-1);
 
+    
+
 end
