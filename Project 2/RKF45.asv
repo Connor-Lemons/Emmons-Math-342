@@ -12,7 +12,7 @@ function [t, w, h] = RKF45(f, a, b, alpha, TOL, hmax, hmin)
     while FLAG == 1
 
         iter = false;
-        h(i) = h_temp;
+        h(i) = h_temp
 
         K1 = h(i)*f(t(i), w(i));
         K2 = h(i)*f(t(i) + (1/4)*h(i), w(i) + K1/4);
